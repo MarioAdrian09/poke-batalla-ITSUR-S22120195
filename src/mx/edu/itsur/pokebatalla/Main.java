@@ -7,6 +7,9 @@ package mx.edu.itsur.pokebatalla;
 import mx.edu.itsur.pokebatalla.model.Bullbasaur;
 import mx.edu.itsur.pokebatalla.model.Pikachu;
 import mx.edu.itsur.pokebatalla.model.Charmander;
+import mx.edu.itsur.pokebatalla.model.Persian;
+import mx.edu.itsur.pokebatalla.model.Machop;
+import mx.edu.itsur.pokebatalla.model.Sandshrew;
 
 /**
  *
@@ -23,15 +26,46 @@ public class Main {
         
         Pikachu pikachuSalvaje = new Pikachu();
         Charmander charmanderSalvaje = new Charmander() ;
+        Persian persianSalvaje = new Persian() ;
+        Machop machopSalvaje = new Machop() ;
+        Sandshrew sandshrewSalvaje = new Sandshrew() ;
+        Bullbasaur bullbasaurSalvaje = new Bullbasaur() ;
         
         //Realizar la captura del pikachu salvaje
         pikachuSalvaje.setNombre("Pedro");        
         Pikachu miPikachu = pikachuSalvaje;
-        
         miPikachu.atacar(charmanderSalvaje);
-        
         miPikachu.atacar(charmanderSalvaje, "ATACKTRUENO");
         
+        ////
+        charmanderSalvaje.setNombre("Dinora");        
+        Charmander miCharmander = charmanderSalvaje;
+        miCharmander.atacar(pikachuSalvaje);
+        miCharmander.atacar(pikachuSalvaje, "ASCUAS");
+        
+        //
+        bullbasaurSalvaje.setNombre("Alanbrillo");        
+        Bullbasaur miBullbasaur = bullbasaurSalvaje;
+        miBullbasaur.atacar(persianSalvaje);
+        miBullbasaur.atacar(persianSalvaje, "LATIGO");
+        
+        //
+        persianSalvaje.setNombre("David");        
+        Persian miPersian = persianSalvaje;
+        miPersian.atacar(bullbasaurSalvaje);
+        miPersian.atacar(bullbasaurSalvaje, "JOYA DE LUZ");
+        
+        //
+        machopSalvaje.setNombre("Motomoto");        
+        Machop miMachop = machopSalvaje;
+        miMachop.atacar( sandshrewSalvaje);
+        miMachop.atacar( sandshrewSalvaje, "GOLPE KARATE");
+        //
+        //  Sandshrew//
+        sandshrewSalvaje.setNombre("Kevin");        
+        Sandshrew miSandshrew = sandshrewSalvaje;
+        miSandshrew.atacar(machopSalvaje);
+        miSandshrew.atacar(machopSalvaje, "AVALANCHA");
     }
     
 }

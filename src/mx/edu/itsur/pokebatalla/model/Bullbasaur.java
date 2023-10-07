@@ -4,6 +4,8 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author FJML1983
@@ -17,6 +19,9 @@ public class Bullbasaur extends Pokemon {
         defensa = 49;
         nivel = 1;
         precision = 4;
+        this.habilidades = new ArrayList<>();
+        this.habilidades.add("LATIGO");
+        this.habilidades.add("LATIGAZO");
     }
 
     //Constructor alterno 1
@@ -24,7 +29,16 @@ public class Bullbasaur extends Pokemon {
         this(); //invocando al constructor default
         this.nombre = nombre;
     }
-    
+      public void atacar(Pokemon oponente, String habilidad){
+        if(habilidad.equals("LATIGO")){
+          
+            System.out.println("Realizando LATIGO");
+        }
+        else if(habilidad.equals("LATIGAZO")){
+            
+            System.out.println("Realizando LATIGAZO");            
+        }
+     }
     
     
 }
