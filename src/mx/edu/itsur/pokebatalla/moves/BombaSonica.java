@@ -3,7 +3,7 @@ package mx.edu.itsur.pokebatalla.moves;
 
 /**
  *
- * @author erick MARIO ADRIAN NAMBO CISNEROS
+ * @author MARIO ADRIAN NAMBO CISNEROS
  */
 public class BombaSonica extends MovimientoEspecial{
 
