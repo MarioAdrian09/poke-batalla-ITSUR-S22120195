@@ -1,50 +1,89 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
 package mx.edu.itsur.pokebatalla;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Bullbasaur;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Pikachu;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Charmander;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Evee;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Aerodactyl;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Dratini;
+
+
+import mx.edu.itsur.pokebatalla.model.Pikachu;
+
+import mx.edu.itsur.pokebatalla.model.Machop;
+import mx.edu.itsur.pokebatalla.model.Persian;
+import mx.edu.itsur.pokebatalla.model.Sandshrew;
+
+
 /**
-Sra. Evelyn Michelle Caro Pérez
-* s22120162
+ *
+ * @author FJML1983
  */
 public class Main {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        System.out.println("¡BIENVENIDO A LA POKEBATALLA!");
-      
-        Evee e = new Evee ("EVEE");
-        Dratini d = new Dratini("DATRINI"); 
-        Aerodactyl a = new Aerodactyl("AERODACTYL");
-        Pikachu p = new Pikachu("PIKACHUUU");
+        // TODO code application logic here
+        System.out.println("Hello PokeBatalla!");
         
         
-        a.atacar(e, Aerodactyl.Movimientos.ATAQUEARENA);
-        System.out.println("---------------------");
-        a.atacar(d, Aerodactyl.Movimientos.ATAQUERAPIDO);
-        System.out.println("---------------------");
-        a.atacar(p, Aerodactyl.Movimientos.AVALANCHA);
-        System.out.println("---------------------");
-        e.atacar(d, Evee.Movimientos.BOMBASONICA);
-        System.out.println("---------------------");
-        e.atacar(a, Evee.Movimientos.BOMBAHUEVO);
-        System.out.println("---------------------");
-        e.atacar(p, Evee.Movimientos.BOMBASONICA);
-        System.out.println("---------------------");
-        p.atacar(e, Pikachu.Movimientos.IMPACTRUENO);
-        System.out.println("---------------------");
-        p.atacar(d, Pikachu.Movimientos.ATAQUE_RAPIDO);
-        System.out.println("---------------------");
-        p.atacar(a, Pikachu.Movimientos.LATIGO);
-        System.out.println("---------------------");
-        d.atacar(e, Dratini.Movimientos.FURIADRAGON);
-        System.out.println("---------------------");
-        d.atacar(a, Dratini.Movimientos.COLADRAGON);
-        System.out.println("---------------------");
-        d.atacar(p, Dratini.Movimientos.DANZADRAGON);
-        System.out.println("---------------------");
         
+        Pikachu a = new Pikachu("MARIO");
+        Machop b = new Machop("Luis");
+        Sandshrew c = new Sandshrew("bryan");
+        Persian d = new Persian("Jose");
+        
+        
+        
+        b.atacar(a, Machop.Movimientos.Contraataque);
+        a.atacar(b, Pikachu.Movimientos.IMPACTRUENO);
+        c.atacar(d, Sandshrew.Movimientos.REFUIGO);
+       d.atacar(c, Persian.Movimientos.BOMBASONICA);
+       d.atacar(d, Persian.Movimientos.DESTRUCTOR);
+       b.atacar(d, Machop.Movimientos.LanzaLlamas);
+        
+        /**
+        Pikachu pikachuSalvaje = new Pikachu();
+        Charmander charmanderSalvaje = new Charmander() ;
+        Persian persianSalvaje = new Persian() ;
+        Machop machopSalvaje = new Machop() ;
+        Sandshrew sandshrewSalvaje = new Sandshrew() ;
+        Bullbasaur bullbasaurSalvaje = new Bullbasaur() ;
+        
+        //Realizar la captura del pikachu salvaje
+        pikachuSalvaje.setNombre("Pedro");        
+        Pikachu miPikachu = pikachuSalvaje;
+        miPikachu.atacar(charmanderSalvaje);
+        
+        ////
+        charmanderSalvaje.setNombre("Dinora");        
+        Charmander miCharmander = charmanderSalvaje;
+        miCharmander.atacar(pikachuSalvaje);
+        miCharmander.atacar(pikachuSalvaje, "ASCUAS");
+        
+        //
+        bullbasaurSalvaje.setNombre("Alanbrillo");        
+        Bullbasaur miBullbasaur = bullbasaurSalvaje;
+        miBullbasaur.atacar(persianSalvaje);
+        miBullbasaur.atacar(persianSalvaje, "LATIGO");
+        
+        //
+        persianSalvaje.setNombre("David");        
+        Persian miPersian = persianSalvaje;
+        miPersian.atacar(bullbasaurSalvaje);
+        miPersian.atacar(bullbasaurSalvaje, "JOYA DE LUZ");
+        
+        //
+        machopSalvaje.setNombre("Motomoto");        
+        Machop miMachop = machopSalvaje;
+        miMachop.atacar( sandshrewSalvaje);
+        miMachop.atacar( sandshrewSalvaje, "GOLPE KARATE");
+        //
+        //  Sandshrew//
+        sandshrewSalvaje.setNombre("Kevin");        
+        Sandshrew miSandshrew = sandshrewSalvaje;
+        miSandshrew.atacar(machopSalvaje);
+        miSandshrew.atacar(machopSalvaje, "AVALANCHA");
+        */
     }
     
 }

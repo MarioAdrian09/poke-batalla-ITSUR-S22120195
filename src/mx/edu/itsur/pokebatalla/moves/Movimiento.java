@@ -1,46 +1,44 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package mx.edu.itsur.pokebatalla.moves;
-import mx.edu.itsur.pokebatalla.model.Pokemons.Pokemon;
+
+import mx.edu.itsur.pokebatalla.model.Pokemon;
 
 /**
  *
- * Esta clase representa nn movimiento o ataque 
- * (Move en inglés; わざ Movimiento en japonés) 
- * es una técnica que los Pokémon son capaces de aprender 
- * y que usan en los combates con el fin de debilitar a sus oponentes.
- * https://www.wikidex.net/wiki/Movimiento
- * @author SRA Evelyn
+ * @author Mario Adrian Nambo Cisneros
  */
 public class Movimiento {
-    enum TiposDeMovimiento {
-        //Primera Generación
-        AGUA,
-        BICHO,
-        DRAGON,
-        ELECTRICO,
-        FANTASMA,
-        FUEGO,
-        HIELO,
-        LUCHA,
-        NORMAL,
-        PLANTA,
-        PSIQUICO,
-        ROCA,
-        SINIESTRO,
-        TIERRA,
-        VENENO,
-        VOLADOR
-        //Segunda Generación
-        //...        
+    enum TiposDeMovimiento{
+    AGUA,
+    BICHO,
+    DRAGON,
+    ELECTRICO,
+    FANTASMA,
+    FUEGO,
+    HIELO,
+    LUCHA,
+    NORMAL,
+    PLANTA,
+    PSIQUICO,
+    ROCA,
+    SINIESTRO,
+    TIERRA,
+    VENENO,
+    VOLADOR
+    
+    
+    
     }
-
-    //Atributos
-    protected TiposDeMovimiento tipo;
-    protected int potencia;
-    protected int precision;
-    protected int puntosPoder;
-
-    //Métodos
+     
+    TiposDeMovimiento tipo;
+    String clase;
+    int potencia;
+    int precision;
+    int puntosPoder;
+    
      public void utilizar(Pokemon usuario, Pokemon objetivo) {
         //Calcular el daño
         int nivelAtacante = usuario.getNivel();
@@ -58,7 +56,9 @@ public class Movimiento {
                         * poderMovimiento / defensaObjetivo) 
                   / 50) + 2) * modificador);
         
-        objetivo.recibirDanio(danio);
+        objetivo.recibirDanio(danio); 
+
+        //Imprimir efecto del movimiento en consola
         System.out.println(
                          usuario.getClass().getSimpleName() + " aplica " + 
                          this.getClass().getSimpleName() + " a " +  
@@ -67,5 +67,7 @@ public class Movimiento {
         System.out.println("El objetivo quedo asi: " + objetivo);
         
     }    
+    
+    
     
 }

@@ -5,12 +5,21 @@
 package mx.edu.itsur.pokebatalla.model;
 
 import java.util.ArrayList;
+import mx.edu.itsur.pokebatalla.moves.Contraataque;
+import mx.edu.itsur.pokebatalla.moves.LanzaLlamas;
+import mx.edu.itsur.pokebatalla.moves.Movimiento;
+import mx.edu.itsur.pokebatalla.moves.PantallaDeLuz;
 
 /**
  *
  * @author Mario Adrian Nambo Cisneros
  */
 public class Machop extends Pokemon{
+     public enum Movimientos {
+    Contraataque,
+    PantallaDeLuz, 
+    LanzaLlamas,
+    }
 
     //Constructor default
     public Machop() {
@@ -20,10 +29,6 @@ public class Machop extends Pokemon{
         this.defensa = 50;
         this.nivel = 1;
         this.precision = 3;
-        this.habilidades = new ArrayList<>();
-        this.habilidades.add("GOLPE KARATE");
-        this.habilidades.add("DEMOLICION ");
-        //....
     }    
     
     //Constructor alterno 1
@@ -32,21 +37,23 @@ public class Machop extends Pokemon{
         this.nombre = nombre;
     }
     
-    public void atacar(Pokemon oponente, String habilidad){
-        if(habilidad.equals("GOLPE KARATE")){
+     public void atacar(Pokemon oponente, Machop.Movimientos movimientoUtilizar)
+    {
+        Movimiento instanciaMovimiento;
+        switch(movimientoUtilizar){
+            case Contraataque:
+            instanciaMovimiento = new Contraataque();
+                break;
+            case PantallaDeLuz:
+                instanciaMovimiento = new PantallaDeLuz();
+                break;
+            case LanzaLlamas:
+                instanciaMovimiento = new LanzaLlamas();
+                break;
           
-            System.out.println("Realizando GOLPE KARATE");
+                default:
+                throw new AssertionError();
         }
-        else if(habilidad.equals("DEMOLICION")){
-            
-            System.out.println("Realizando DEMOLICION");            
-        }
-    
-    
-    
-    
-    
-    
-    
-    
-    }}
+         instanciaMovimiento.utilizar(this, oponente);
+    }
+    }

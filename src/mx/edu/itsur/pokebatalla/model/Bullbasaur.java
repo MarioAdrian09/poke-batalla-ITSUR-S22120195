@@ -3,14 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mx.edu.itsur.pokebatalla.model;
-
-import java.util.ArrayList;
+import mx.edu.itsur.pokebatalla.moves.AtaqueRapido;
+import mx.edu.itsur.pokebatalla.moves.Latigo;
+import mx.edu.itsur.pokebatalla.moves.Movimiento;
 
 /**
  *
- * @author FJML1983
+ * @author Mario Adrian Nambo Cisneros
  */
 public class Bullbasaur extends Pokemon {
+
+     public enum Movimientos {
+        ATAQUE_RAPIDO,
+        LATIGO
+    }
 
     public Bullbasaur() {
         tipo = "PLANTA/VENENO";
@@ -19,26 +25,33 @@ public class Bullbasaur extends Pokemon {
         defensa = 49;
         nivel = 1;
         precision = 4;
-        this.habilidades = new ArrayList<>();
-        this.habilidades.add("LATIGO");
-        this.habilidades.add("LATIGAZO");
     }
 
     //Constructor alterno 1
-    public Bullbasaur(String nombre){
+    public Bullbasaur(String nombre) {
         this(); //invocando al constructor default
         this.nombre = nombre;
+
     }
-      public void atacar(Pokemon oponente, String habilidad){
-        if(habilidad.equals("LATIGO")){
-          
-            System.out.println("Realizando LATIGO");
+     public void atacar(Pokemon oponente, Bullbasaur.Movimientos movimientoAUtilizar) {
+
+        //Instanciar el movimiento solicitado
+        Movimiento instanciaMovimiento;
+        switch (movimientoAUtilizar) {
+            case ATAQUE_RAPIDO:
+                instanciaMovimiento = new AtaqueRapido();
+                break;
+            case LATIGO:
+                instanciaMovimiento = new Latigo();
+                break;
+            default:
+                throw new AssertionError();
         }
-        else if(habilidad.equals("LATIGAZO")){
-            
-            System.out.println("Realizando LATIGAZO");            
-        }
-     }
-    
+
+        //Aplicar el movimiento
+        instanciaMovimiento.utilizar(this, oponente);
+
+    }
+
     
 }

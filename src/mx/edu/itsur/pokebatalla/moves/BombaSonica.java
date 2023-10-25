@@ -1,15 +1,16 @@
+
 package mx.edu.itsur.pokebatalla.moves;
+
 /**
-Sra. Evelyn Michelle Caro Pérez
+ *
+ * @author erick MARIO ADRIAN NAMBO CISNEROS
  */
-public class BombaSonica extends MovimientoEspecial
-{
-    public BombaSonica()
-     {
-          this.tipo =TiposDeMovimiento.NORMAL;
-          this.potencia = 0;
-          this.precision = 90;
-          this.puntosPoder = 20;
-     }
+public class BombaSonica extends MovimientoEspecial{
+
+    public BombaSonica() {
+        this.potencia = 0;
+        this.precision =90;
+        this.puntosPoder  = 20;
+    }
     
 }

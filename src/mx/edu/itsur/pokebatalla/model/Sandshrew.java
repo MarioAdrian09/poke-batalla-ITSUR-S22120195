@@ -5,6 +5,13 @@
 package mx.edu.itsur.pokebatalla.model;
 
 import java.util.ArrayList;
+import mx.edu.itsur.pokebatalla.moves.BombaSonica;
+import mx.edu.itsur.pokebatalla.moves.Hiperrayo;
+import mx.edu.itsur.pokebatalla.moves.LanzaLlamas;
+import mx.edu.itsur.pokebatalla.moves.Movimiento;
+import mx.edu.itsur.pokebatalla.moves.PantallaDeLuz;
+import mx.edu.itsur.pokebatalla.moves.PatadaGiro;
+import mx.edu.itsur.pokebatalla.moves.Refugio;
 
 /**
  *
@@ -12,6 +19,11 @@ import java.util.ArrayList;
  */
 public class Sandshrew extends Pokemon{
 
+      public enum Movimientos {
+    PATADAGIRO,
+    HIPERRAYO, 
+    REFUIGO,
+    }
     //Constructor default
     public Sandshrew() {
         this.tipo = "LUCHA";
@@ -20,10 +32,6 @@ public class Sandshrew extends Pokemon{
         this.defensa = 85;
         this.nivel = 1;
         this.precision = 5;
-        this.habilidades = new ArrayList<>();
-        this.habilidades.add("DISPARO LODO");
-        this.habilidades.add("AVALANCHA");
-        //....
     }    
     
     //Constructor alterno 1
@@ -32,16 +40,25 @@ public class Sandshrew extends Pokemon{
         this.nombre = nombre;
     }
     
-    public void atacar(Pokemon oponente, String habilidad){
-        if(habilidad.equals("DISPARO LODO")){
+     public void atacar(Pokemon oponente, Sandshrew.Movimientos movimientoUtilizar)
+    {
+        Movimiento instanciaMovimiento;
+        switch(movimientoUtilizar){
+            case PATADAGIRO:
+            instanciaMovimiento = new PatadaGiro();
+                break;
+            case HIPERRAYO:
+                instanciaMovimiento = new Hiperrayo();
+                break;
+            case REFUIGO:
+                instanciaMovimiento = new Refugio();
+                break;
           
-            System.out.println("Realizando DISPARO LODO");
+                default:
+                throw new AssertionError();
         }
-        else if(habilidad.equals("AVALANCHA")){
-            
-            System.out.println("Realizando AVALANCHA");            
-        }
-    
-    
+         instanciaMovimiento.utilizar(this, oponente);
     }
+    
+    
 }
