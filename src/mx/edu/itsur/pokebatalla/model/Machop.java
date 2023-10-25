@@ -33,7 +33,7 @@ public class Machop extends Pokemon{
     
     //Constructor alterno 1
     public Machop(String nombre){
-        this(); //invocando al constructor default
+        this(); 
         this.nombre = nombre;
     }
     

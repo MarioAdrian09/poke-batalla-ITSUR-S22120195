@@ -29,13 +29,12 @@ public class Bullbasaur extends Pokemon {
 
     //Constructor alterno 1
     public Bullbasaur(String nombre) {
-        this(); //invocando al constructor default
+        this(); 
         this.nombre = nombre;
 
     }
      public void atacar(Pokemon oponente, Bullbasaur.Movimientos movimientoAUtilizar) {
 
-        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case ATAQUE_RAPIDO:
@@ -48,7 +47,7 @@ public class Bullbasaur extends Pokemon {
                 throw new AssertionError();
         }
 
-        //Aplicar el movimiento
+
         instanciaMovimiento.utilizar(this, oponente);
 
     }

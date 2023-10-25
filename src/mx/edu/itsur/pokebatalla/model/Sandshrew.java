@@ -4,12 +4,9 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
-import java.util.ArrayList;
-import mx.edu.itsur.pokebatalla.moves.BombaSonica;
+
 import mx.edu.itsur.pokebatalla.moves.Hiperrayo;
-import mx.edu.itsur.pokebatalla.moves.LanzaLlamas;
 import mx.edu.itsur.pokebatalla.moves.Movimiento;
-import mx.edu.itsur.pokebatalla.moves.PantallaDeLuz;
 import mx.edu.itsur.pokebatalla.moves.PatadaGiro;
 import mx.edu.itsur.pokebatalla.moves.Refugio;
 
@@ -24,7 +21,7 @@ public class Sandshrew extends Pokemon{
     HIPERRAYO, 
     REFUIGO,
     }
-    //Constructor default
+
     public Sandshrew() {
         this.tipo = "LUCHA";
         this.hp = 50;
@@ -34,9 +31,9 @@ public class Sandshrew extends Pokemon{
         this.precision = 5;
     }    
     
-    //Constructor alterno 1
+
     public Sandshrew (String nombre){
-        this(); //invocando al constructor default
+        this();
         this.nombre = nombre;
     }
     

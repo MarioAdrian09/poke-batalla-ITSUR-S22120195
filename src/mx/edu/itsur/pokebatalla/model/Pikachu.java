@@ -18,11 +18,8 @@ public class Pikachu  extends Pokemon{
         IMPACTRUENO,
         ATAQUE_RAPIDO,
         LATIGO
-
-        //Otros movimientos...
     }
 
-    //Constructor default
     public Pikachu() {
         this.tipo = "ELECTRICO";
         this.hp = 35;
@@ -32,15 +29,13 @@ public class Pikachu  extends Pokemon{
         this.precision = 4;
     }
 
-    //Constructor alterno 1
     public Pikachu(String nombre) {
-        this(); //invocando al constructor default
+        this(); 
         this.nombre = nombre;
     }
 
     public void atacar(Pokemon oponente, Pikachu.Movimientos movimientoAUtilizar) {
 
-        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;        
         switch (movimientoAUtilizar) {
             case IMPACTRUENO:
@@ -52,13 +47,12 @@ public class Pikachu  extends Pokemon{
             case LATIGO:
                 instanciaMovimiento = new Latigo();
                 break;
-
-            //Otros movimientos aquí...                
+           
             default:
                 throw new AssertionError();
         }
 
-        //Aplicar el movimiento.
+
         instanciaMovimiento.utilizar(this, oponente);
     }
     

@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class Pokemon {
 
-    //Atributos
     protected String tipo;
     protected String nombre;
     protected int nivel;
@@ -25,7 +24,6 @@ public class Pokemon {
     Pokemon() {
     }
 
-    //Setters
  public int getNivel() {
         return nivel;
     }
@@ -35,17 +33,14 @@ public class Pokemon {
     public int getDefensa(){
         return defensa;
     }
-    
-    //Setters
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    //Métodos 
     public void recibirDanio(int danio){
         this.hp = this.hp - danio;
     }        
-    //Métodos
 
     @Override
     public String toString() {

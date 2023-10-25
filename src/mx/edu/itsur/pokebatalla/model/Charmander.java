@@ -14,8 +14,6 @@ import mx.edu.itsur.pokebatalla.moves.Movimiento;
 public class Charmander extends Pokemon {
      public enum Movimientos {
         ATAQUE_RAPIDO,
-
-        //Otros movimientos...
     }
 
     public Charmander() {
@@ -42,7 +40,6 @@ public class Charmander extends Pokemon {
                 instanciaMovimiento = new AtaqueRapido();
                 break;
 
-            //Otros movimientos aquí...
             default:
                 throw new AssertionError();
         }

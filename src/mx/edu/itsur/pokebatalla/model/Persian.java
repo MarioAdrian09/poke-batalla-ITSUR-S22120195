@@ -35,13 +35,12 @@ public class Persian extends Pokemon{
     
     //Constructor alterno 1
     public Persian(String nombre){
-        this(); //invocando al constructor default
+        this(); 
         this.nombre = nombre;
     }
     
     public void atacar(Pokemon oponente, Persian.Movimientos movimientoAUtilizar) {
 
-        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case ANULACION:
