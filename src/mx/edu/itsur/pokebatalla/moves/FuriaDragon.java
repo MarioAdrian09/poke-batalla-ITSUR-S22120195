@@ -1,6 +1,6 @@
 package mx.edu.itsur.pokebatalla.moves;
 /**
-
+@author MARIO ADRIAN NAMBO CISNEROS
  */
 
 public class FuriaDragon extends MovimientoEspecial{
