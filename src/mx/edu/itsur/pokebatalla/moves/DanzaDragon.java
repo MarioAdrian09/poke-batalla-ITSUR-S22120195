@@ -1,6 +1,6 @@
 package mx.edu.itsur.pokebatalla.moves;
 /**
-MARIO ADRIAN NAMBO CISNEROS
+@autor MARIO ADRIAN NAMBO CISNEROS
  */
 public class DanzaDragon extends MovimientoEstado{
     public DanzaDragon()
