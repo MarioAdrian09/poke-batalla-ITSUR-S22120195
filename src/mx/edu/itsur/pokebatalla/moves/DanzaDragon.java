@@ -1,7 +1,5 @@
 package mx.edu.itsur.pokebatalla.moves;
 /**
-
-* s22120162
  */
 public class DanzaDragon extends MovimientoEstado{
     public DanzaDragon()
