@@ -1,8 +1,5 @@
 package mx.edu.itsur.pokebatalla.moves;
-/**
-Sra. Evelyn Michelle Caro Pérez
-s22120162
- */
+
 public class Avalancha extends MovimientoFisico{
     public Avalancha()
     {
