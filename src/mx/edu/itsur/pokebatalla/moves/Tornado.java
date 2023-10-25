@@ -1,7 +1,6 @@
 package mx.edu.itsur.pokebatalla.moves;
 /**
-Sra. Evelyn Michelle Caro Pérez
-* s22120162
+*
  */
 public class Tornado extends MovimientoEspecial{
     public Tornado()
