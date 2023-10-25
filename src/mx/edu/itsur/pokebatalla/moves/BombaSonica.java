@@ -2,7 +2,7 @@
 package mx.edu.itsur.pokebatalla.moves;
 
 /**
- *
+ *El movimiento se aprende por subir de nivel o MTO
  * @author MARIO ADRIAN NAMBO CISNEROS
  */
 public class BombaSonica extends MovimientoEspecial{
