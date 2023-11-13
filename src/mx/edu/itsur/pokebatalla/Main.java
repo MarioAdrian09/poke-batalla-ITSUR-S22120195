@@ -10,6 +10,8 @@ import mx.edu.itsur.pokebatalla.model.Pikachu;
 import mx.edu.itsur.pokebatalla.model.Machop;
 import mx.edu.itsur.pokebatalla.model.Persian;
 import mx.edu.itsur.pokebatalla.model.Sandshrew;
+import mx.edu.itsur.pokebatalla.model.battles.Batalla;
+import mx.edu.itsur.pokebatalla.model.battles.Entrenador;
 
 
 /**
@@ -32,8 +34,19 @@ public class Main {
         Sandshrew c = new Sandshrew("bryan");
         Persian d = new Persian("Jose");
         
+         Entrenador en1 = new Entrenador("Maria");
+        en1.capturarPokemon(a);
+        en1.capturarPokemon(b);
+
+        Entrenador en2 = new Entrenador("Juanita");
+        en2.capturarPokemon(c);
+        en2.capturarPokemon(d);
+
+        Batalla v = new Batalla(en1, en2);
+        v.desarrollarBatalla();
         
         
+        /*
         b.atacar(a, Machop.Movimientos.Contraataque);
         a.atacar(b, Pikachu.Movimientos.IMPACTRUENO);
         c.atacar(d, Sandshrew.Movimientos.REFUIGO);

@@ -36,11 +36,25 @@ public class Machop extends Pokemon{
         this(); 
         this.nombre = nombre;
     }
+    @Override
+    public Enum[] getMovimientos() {
+        return Machop.Movimientos.values();
+    }
     
-     public void atacar(Pokemon oponente, Machop.Movimientos movimientoUtilizar)
+    @Override
+     public void atacar(Pokemon oponente, int ordinalMovimiento)
     {
+          if (this.hp <= 0) {
+            System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        
+        Machop.Movimientos movimientoAUtilizar
+                = Machop.Movimientos.values()[ordinalMovimiento];
         Movimiento instanciaMovimiento;
-        switch(movimientoUtilizar){
+        switch(movimientoAUtilizar){
             case Contraataque:
             instanciaMovimiento = new Contraataque();
                 break;

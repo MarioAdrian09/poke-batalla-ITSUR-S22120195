@@ -33,9 +33,23 @@ public class Pikachu  extends Pokemon{
         this(); 
         this.nombre = nombre;
     }
+    
+    @Override
+    public Enum[] getMovimientos() {
+        return Pikachu.Movimientos.values();
+    }
+    
+    @Override
+    public void atacar(Pokemon oponente,  int ordinalMovimiento) {
+                if (this.hp <= 0) {
+            System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
 
-    public void atacar(Pokemon oponente, Pikachu.Movimientos movimientoAUtilizar) {
-
+        
+        Pikachu.Movimientos movimientoAUtilizar
+                = Pikachu.Movimientos.values()[ordinalMovimiento];
+        
         Movimiento instanciaMovimiento;        
         switch (movimientoAUtilizar) {
             case IMPACTRUENO:

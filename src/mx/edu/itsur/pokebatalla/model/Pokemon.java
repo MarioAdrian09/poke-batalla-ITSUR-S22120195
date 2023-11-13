@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author FJML1983
  */
-public class Pokemon {
+public abstract class Pokemon {
 
     protected String tipo;
     protected String nombre;
@@ -20,6 +20,7 @@ public class Pokemon {
     protected int defensa;
     protected double precision;
     protected List<String> habilidades;
+     protected int xp;
 
     Pokemon() {
     }
@@ -41,6 +42,15 @@ public class Pokemon {
     public void recibirDanio(int danio){
         this.hp = this.hp - danio;
     }        
+    public int gethp()
+        {
+            return hp;
+        }
+    
+    public  abstract void atacar(Pokemon oponente, int ordinalMovimiento );
+
+
+    public abstract Enum[] getMovimientos();
 
     @Override
     public String toString() {

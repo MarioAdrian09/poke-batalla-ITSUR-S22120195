@@ -31,9 +31,21 @@ public class Bullbasaur extends Pokemon {
     public Bullbasaur(String nombre) {
         this(); 
         this.nombre = nombre;
-
     }
-     public void atacar(Pokemon oponente, Bullbasaur.Movimientos movimientoAUtilizar) {
+    @Override
+    public Enum[] getMovimientos() {
+        return Bullbasaur.Movimientos.values();
+    }
+    @Override
+     public void atacar(Pokemon oponente, int ordinalMovimiento) {
+           if (this.hp <= 0) {
+            System.out.println("Bulbasaur esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Pikachu.Movimientos movimientoAUtilizar
+                = Pikachu.Movimientos.values()[ordinalMovimiento];
 
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {

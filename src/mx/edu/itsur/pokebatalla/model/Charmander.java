@@ -30,8 +30,21 @@ public class Charmander extends Pokemon {
         this(); //invocando al constructor default
         this.nombre = nombre;
     }
+    @Override
+    public Enum[] getMovimientos() {
+        return Charmander.Movimientos.values();
+    }
+    
+    @Override
+    public void atacar(Pokemon oponente,int ordinalMovimiento) {
+          if (this.hp <= 0) {
+            System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
 
-    public void atacar(Pokemon oponente, Charmander.Movimientos movimientoAUtilizar) {
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Pikachu.Movimientos movimientoAUtilizar
+                = Pikachu.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;

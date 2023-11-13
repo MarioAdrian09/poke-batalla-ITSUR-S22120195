@@ -37,10 +37,25 @@ public class Sandshrew extends Pokemon{
         this.nombre = nombre;
     }
     
-     public void atacar(Pokemon oponente, Sandshrew.Movimientos movimientoUtilizar)
+    @Override
+    public Enum[] getMovimientos() {
+        return Sandshrew.Movimientos.values();
+    }
+    
+    @Override
+     public void atacar(Pokemon oponente, int ordinalMovimiento)
     {
+         if (this.hp <= 0) {
+            System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Sandshrew.Movimientos movimientoAUtilizar
+                = Sandshrew.Movimientos.values()[ordinalMovimiento];
+        
         Movimiento instanciaMovimiento;
-        switch(movimientoUtilizar){
+        switch(movimientoAUtilizar){
             case PATADAGIRO:
             instanciaMovimiento = new PatadaGiro();
                 break;

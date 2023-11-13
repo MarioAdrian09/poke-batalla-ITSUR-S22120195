@@ -38,9 +38,21 @@ public class Persian extends Pokemon{
         this(); 
         this.nombre = nombre;
     }
+    @Override
+    public Enum[] getMovimientos() {
+        return Persian.Movimientos.values();
+    }
     
-    public void atacar(Pokemon oponente, Persian.Movimientos movimientoAUtilizar) {
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+          if (this.hp <= 0) {
+            System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
 
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Persian.Movimientos movimientoAUtilizar
+                = Persian.Movimientos.values()[ordinalMovimiento];
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case ANULACION:
