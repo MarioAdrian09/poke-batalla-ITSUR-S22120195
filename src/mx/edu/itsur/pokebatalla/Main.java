@@ -43,7 +43,7 @@ public class Main {
         en2.capturarPokemon(d);
 
         Batalla v = new Batalla(en1, en2);
-        v.desarrollarBatalla();
+        v.IniciarBatalla();
         
         
         /*
