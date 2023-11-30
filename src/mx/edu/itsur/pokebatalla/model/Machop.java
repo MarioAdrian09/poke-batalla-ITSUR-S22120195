@@ -4,6 +4,7 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import mx.edu.itsur.pokebatalla.moves.Contraataque;
 import mx.edu.itsur.pokebatalla.moves.LanzaLlamas;
@@ -14,7 +15,7 @@ import mx.edu.itsur.pokebatalla.moves.PantallaDeLuz;
  *
  * @author Mario Adrian Nambo Cisneros
  */
-public class Machop extends Pokemon{
+public class Machop extends Pokemon implements Serializable{
      public enum Movimientos {
     Contraataque,
     PantallaDeLuz, 

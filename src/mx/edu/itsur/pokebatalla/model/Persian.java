@@ -4,6 +4,7 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.moves.Anulacion;
 import mx.edu.itsur.pokebatalla.moves.BombaSonica;
 import mx.edu.itsur.pokebatalla.moves.Destructor;
@@ -14,7 +15,7 @@ import mx.edu.itsur.pokebatalla.moves.Movimiento;
  *
  * @author Mario Adrian Nambo Cisneros
  */
-public class Persian extends Pokemon{
+public class Persian extends Pokemon implements Serializable{
     public enum Movimientos {
         ANULACION,
         DESTRUCTOR,

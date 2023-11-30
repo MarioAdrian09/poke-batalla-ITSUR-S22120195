@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mx.edu.itsur.pokebatalla.model;
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.moves.AtaqueRapido;
 import mx.edu.itsur.pokebatalla.moves.Latigo;
 import mx.edu.itsur.pokebatalla.moves.Movimiento;
@@ -11,7 +12,7 @@ import mx.edu.itsur.pokebatalla.moves.Movimiento;
  *
  * @author Mario Adrian Nambo Cisneros
  */
-public class Bullbasaur extends Pokemon {
+public class Bullbasaur extends Pokemon implements Serializable {
 
      public enum Movimientos {
         ATAQUE_RAPIDO,

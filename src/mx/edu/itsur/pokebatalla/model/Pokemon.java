@@ -4,13 +4,14 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author FJML1983
  */
-public abstract class Pokemon {
+public abstract class Pokemon implements Serializable{
 
     protected String tipo;
     protected String nombre;

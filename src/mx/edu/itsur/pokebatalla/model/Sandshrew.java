@@ -5,6 +5,7 @@
 package mx.edu.itsur.pokebatalla.model;
 
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.moves.Hiperrayo;
 import mx.edu.itsur.pokebatalla.moves.Movimiento;
 import mx.edu.itsur.pokebatalla.moves.PatadaGiro;
@@ -14,7 +15,7 @@ import mx.edu.itsur.pokebatalla.moves.Refugio;
  *
  * @author MARIO ADRIAN NAMBO CISNEROS
  */
-public class Sandshrew extends Pokemon{
+public class Sandshrew extends Pokemon implements Serializable{
 
       public enum Movimientos {
     PATADAGIRO,
