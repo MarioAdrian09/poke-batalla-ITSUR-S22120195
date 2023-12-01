@@ -9,6 +9,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import mx.edu.itsur.pokebatalla.model.battles.Batalla;
 
+/**
+ *
+ * @author MARIO ADRIAN NAMBO CISNEROS
+ */
 public class FileManager {
 
     public static final String Partida = "partida.foquemon";
